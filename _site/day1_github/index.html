@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Version Control and Collaboration</title>
+
+  <meta name="author" content="Maxim Romanov" />
+
+  
+  <meta name="description" content="Getting to know `git` and `github.com`">
+  
+
+  <link rel="alternate" type="application/rss+xml" title="DiH Course @ School of Mamluk Studies 2018, UGhent - A Three-Day Intensive Course in Digital Islamic Humanities" href="/feed.xml" />
+
+  
+
+  
+    
+      
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="Version Control and Collaboration" />
+  
+
+   
+  <meta property="og:description" content="Getting to know `git` and `github.com`">
+  
+
+
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="http://localhost:4000/day1_github/" />
+  <link rel="canonical" href="http://localhost:4000/day1_github/" />
+  
+
+  
+  <meta property="og:image" content="http://localhost:4000/img/avatar-icon.png" />
+  
+
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@" />
+  <meta name="twitter:creator" content="@" />
+
+  
+  <meta name="twitter:title" content="Version Control and Collaboration" />
+  
+
+  
+  <meta name="twitter:description" content="Getting to know `git` and `github.com`">
+  
+
+  
+  <meta name="twitter:image" content="http://localhost:4000/img/avatar-icon.png" />
+  
+
+  
+
+</head>
+
+
+  <body>
+
+    
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+        <a class="navbar-brand" href="http://localhost:4000">DiH Course @ School of Mamluk Studies 2018, UGhent</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="/index">About</a>
+
+          </li>
+        
+        
+        
+          <li class="navlinks-container">
+            <a class="navlinks-parent" href="javascript:void(0)">Day 1</a>
+            <div class="navlinks-children">
+              
+                
+                  
+
+
+
+
+
+
+<a href="/day1_plan">Plan</a>
+
+                
+              
+            </div>
+          </li>
+        
+        
+        
+          <li class="navlinks-container">
+            <a class="navlinks-parent" href="javascript:void(0)">Day 2</a>
+            <div class="navlinks-children">
+              
+                
+                  
+
+
+
+
+
+
+<a href="/day2_plan">Plan</a>
+
+                
+              
+            </div>
+          </li>
+        
+        
+        
+          <li class="navlinks-container">
+            <a class="navlinks-parent" href="javascript:void(0)">Day 3</a>
+            <div class="navlinks-children">
+              
+                
+                  
+
+
+
+
+
+
+<a href="/day3_plan">Plan</a>
+
+                
+              
+            </div>
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+	    <a href="http://localhost:4000 ">
+	      <img class="avatar-img" src="/img/avatar-icon.png" />
+		</a>
+	  </div>
+	</div>
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+  <div id="header-big-imgs" data-num-img=1
+    
+	  
+	  
+	    
+		  data-img-src-1="/img/00093u_dark.jpg"
+		
+	  
+    
+  ></div>
+
+
+<header class="header-section has-img">
+
+<div class="big-img intro-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h1>Version Control and Collaboration</h1>
+		  
+		    
+            <hr class="small">
+            <span class="page-subheading">Getting to know `git` and `github.com`</span>
+			
+		  
+		  
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class='img-desc'></span>
+</div>
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h1>Version Control and Collaboration</h1>
+		  
+		    
+            <hr class="small">
+            <span class="page-subheading">Getting to know `git` and `github.com`</span>
+			
+		  
+		  
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <h1 id="general-workflow">General workflow:</h1>
+
+<ul>
+  <li><a href="https://github.com/">github.com</a> :: make an account</li>
+  <li>download git software (Windows; Macs usually have it already)</li>
+  <li><code class="highlighter-rouge">fork</code> a repository</li>
+  <li><code class="highlighter-rouge">clone</code></li>
+  <li><em>work</em></li>
+  <li><code class="highlighter-rouge">add</code></li>
+  <li><code class="highlighter-rouge">commit</code></li>
+  <li><code class="highlighter-rouge">push</code> / <code class="highlighter-rouge">pull</code></li>
+  <li>send <code class="highlighter-rouge">pull request</code></li>
+</ul>
+
+<h1 id="some-command-line-commands">Some command line commands</h1>
+
+<ul>
+  <li><code class="highlighter-rouge">pwd</code>
+    <ul>
+      <li>shows you where you are on a drive (gives you path)</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">ls</code> / <code class="highlighter-rouge">dir</code> [on Windows]
+    <ul>
+      <li>shows everything in the your current location/folder</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">cd &lt;name of the folder&gt;</code>
+    <ul>
+      <li>takes you to that folder</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">cd ..</code>
+    <ul>
+      <li>takes you one level up in the tree structure of your computer</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="github-main-commands">GitHub: Main Commands</h1>
+
+<ul>
+  <li><code class="highlighter-rouge">git clone &lt;link&gt;</code>
+    <ul>
+      <li>clones/downloads a repository on you machine</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">git status</code>
+    <ul>
+      <li>shows the current status of the repository (new, changed, deleted)</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">git add .</code>
+    <ul>
+      <li>adds all new files and modified files to the repository</li>
+    </ul>
+  </li>
+  <li>`git commit -m “message”
+    <ul>
+      <li>saves all files in their current state into the repository, and created a milestone</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">git push origin master</code>
+    <ul>
+      <li>uploads changes to <a href="https://github.com/">github.com</a></li>
+      <li><strong>NB:</strong> sometimes you may get an error, which in most cases means that you need to <code class="highlighter-rouge">pull</code> first</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">git pull origin master</code>
+    <ul>
+      <li>downloads changes from <a href="https://github.com/">github.com</a></li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">git log</code>
+    <ul>
+      <li>shows the history of <code class="highlighter-rouge">commit</code>s; here you can choose where you want to roll back, in case of troubles</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="goals">Goals:</h2>
+
+<p>Learning about version control systems and how they help in the development of  DH project, which are often a lengthy and complex, and require organic collaboration.</p>
+
+<h2 id="software">Software:</h2>
+
+<ul>
+  <li>
+    <p>create your github account @ <a href="https://github.com/">https://github.com/</a></p>
+  </li>
+  <li>
+    <p>Github</p>
+    <ul>
+      <li>[Win] install from here: <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></li>
+      <li>[Mac] github is already on your machine</li>
+      <li>[Win] also install the desktop interface <a href="https://desktop.github.com/">https://desktop.github.com/</a>)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="tutorials">Tutorials:</h2>
+
+<ul>
+  <li>Complete Codecademy’s <em>Learn Git</em> <a href="https://www.codecademy.com/learn/learn-git">https://www.codecademy.com/learn/learn-git</a>;
+    <ul>
+      <li>if you’d like more practice, there is another one: <a href="https://try.github.io">https://try.github.io</a></li>
+    </ul>
+  </li>
+  <li>Also, add a page with this confirmation to the shared (forked site) and send me <code class="highlighter-rouge">pull request</code></li>
+</ul>
+
+
+	    
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links"><li><a href="/feed.xml" title="RSS"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">RSS</span>
+              </a>
+            </li><li><a href="mailto:someone@example.com" title="Email me"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Email me</span>
+              </a>
+            </li></ul>
+      <p class="copyright text-muted">
+      Maxim Romanov
+      &nbsp;&bull;&nbsp;
+      2018
+
+      
+      &nbsp;&bull;&nbsp;
+      <a href="http://localhost:4000">sms2018-uGhent.github.io/</a>
+      
+
+      
+      </p>
+          <!-- Please don't remove this, keep my open source work credited :) -->
+    <p class="theme-by text-muted">
+      Theme by
+      <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/main.js"></script>
+    
+  
+
+
+
+
+  
+  </body>
+</html>
