@@ -48,11 +48,11 @@ def tagText(textFile, taggingScheme, limit, reflow):
     # loading search report
     suffix = taggingScheme.split(".")[0]
     reportSE = textFile+"."+suffix+"Search"
-    if os.path.isfile(dataFolder+reportSE):
-        with open(dataFolder+reportSE, "r", encoding="utf8") as f1a:
+    if os.path.isfile(generated+reportSE):
+        with open(generated+reportSE, "r", encoding="utf8") as f1a:
             reportSearch = f1a.read().split("\n")
     else:
-        with open(dataFolder+reportSE, "w", encoding="utf8") as f9a:
+        with open(generated+reportSE, "w", encoding="utf8") as f9a:
             f9a.write("")
         reportSearch = []
 
