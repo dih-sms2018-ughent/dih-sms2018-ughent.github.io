@@ -200,7 +200,9 @@ dataFolder    = "./data/"
 schemeFolder  = "./interpretative_schemes/"
 generated = "./generated/"
 
-textFile      = "0578IbnBashkuwal.Sila.Shamela0022788-ara1.mARkdown"
+with open("_fileToEdit.txt", "r", encoding="utf8") as f1:
+    textFile = f1.read()
+
 taggingScheme = "TopTagScheme.csv"
 limit         = 0
 
