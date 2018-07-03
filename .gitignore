@@ -8,6 +8,9 @@
 # Icon must end with two \r
 Icon
 
+# Folders
+./files/day3/2_extractingToponymicData/generated/*
+
 
 # Thumbnails
 ._*
