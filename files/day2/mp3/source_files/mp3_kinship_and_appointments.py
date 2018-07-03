@@ -1,6 +1,34 @@
 
 import itertools
 
+def generateNodes():
+    ls = []
+
+    with open("_mp3_properties_kinship_blood.csv", "r", encoding="utf8") as f1:
+        raw = f1.read().split("\n")
+
+        for r in raw:
+            r = r.split("\t")
+
+            ls.append(r[0])
+            ls.append(r[2])
+
+    with open("_mp3_properties_kinship_marriagerelationships.csv", "r", encoding="utf8") as f1:
+        raw = f1.read().split("\n")
+
+        for r in raw:
+            r = r.split("\t")
+
+            ls.append(r[0])
+            ls.append(r[2])
+
+    ls = list(set(ls))
+
+    with open("mp3_kinshipNodes.csv", "w", encoding="utf8") as f9:
+        f9.write("id\n"+"\n".join(sorted(ls)))
+        
+generateNodes()
+
 def generateEdges(file):
     print(file)
     dic = {}
@@ -56,7 +84,7 @@ generateEdges("_mp3_properties_kinship_blood.csv")
 generateEdges("_mp3_interactions_appointments.csv")
 generateEdges("_mp3_properties_kinship_marriagerelationships.csv")
 
-generateEdges("mp3_royalnetworks.csv")
+generateEdges("_mp3_royalnetworks.csv")
 
 def mergeNetworks(nw1, nw2):
     nwd = {}
