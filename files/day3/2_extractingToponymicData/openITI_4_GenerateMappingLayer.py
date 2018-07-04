@@ -60,14 +60,15 @@ def convertProgressReport(progressRep):
         regDic = {}
         topoList = []
         for k,v in dic.items():
-            topoList.append(gaz[k]+"\t"+str(v))
-
-            reg = gaz[k].split("\t")[1]
-            updateDic(regDic, reg, v)
+            if k in gaz:
+                topoList.append(gaz[k]+"\t"+str(v))
+                reg = gaz[k].split("\t")[1]
+                updateDic(regDic, reg, v)
 
         regList = []
         for k,v in regDic.items():
-            regList.append(gaz[k]+"\t"+str(v))
+            if k in gaz:
+                regList.append(gaz[k]+"\t"+str(v))
 
         HEAD = "URI\tREG_MESO\tTR\tSEARCH\tEN\tTYPE\tLON\tLAT\tAR\tAR_Alt\tAR_Sort\tFREQ\n"
 
