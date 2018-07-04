@@ -72,7 +72,7 @@ def convertProgressReport(progressRep):
             if k in gaz:
                 regList.append(gaz[k]+"\t"+str(v))
 
-        HEAD = "URI\tREG_MESO\tTR\tSEARCH\tEN\tTYPE\tLAT\tLON\tAR\tAR_Alt\tAR_Sort\tFREQ\n"
+        HEAD = "URI\tREG_MESO\tTR\tSEARCH\tEN\tTYPE\tLON\tLAT\tAR\tAR_Alt\tAR_Sort\tFREQ\n"
 
         topoList = HEAD+"\n".join(topoList)
         regList =  HEAD+"\n".join(regList)
