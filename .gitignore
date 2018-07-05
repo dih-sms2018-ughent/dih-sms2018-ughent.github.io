@@ -11,8 +11,10 @@
 Icon
 
 # Folders
-files/day3/2_extractingToponymicData/generated/
-files/day3/3_GIStingTexts/
+files/day3/2_extractingToponymicData/generated/*.TopTag*
+files/day3/2_extractingToponymicData/generated/*MLprogress*
+files/day3/2_extractingToponymicData/generated/*.tagged
+files/day3/3_GIStingTexts/*.csv
 
 # Thumbnails
 ._*

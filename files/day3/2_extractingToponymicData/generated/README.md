@@ -1,0 +1,1 @@
+Scripts `openITI_1_Autotagger.py`, `openITI_2_GazMatcher.py`, and `openITI_3_DisambiguatorGazOrdered.py` generate their results into this folder.

@@ -1,0 +1,1 @@
+Scripts `openITI_4_GenerateMappingLayer.py` and `openITI_5_GenerateMappingLayer_RAW.py` will generate results into this folder.
